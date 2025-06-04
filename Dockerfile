@@ -9,8 +9,6 @@ RUN groupadd -g ${PGID} user && \
     useradd -l -u ${PUID} -g user -m user && \
     usermod -p "*" user -s /bin/bash
 
-RUN pip install --no-cache-dir -r requirements.txt
-
 WORKDIR /app
 
 CMD ["sh", "entrypoint.sh"]
