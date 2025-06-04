@@ -9,7 +9,7 @@ def store(data) -> str:
     payload = UserDTO(name=data.name, weight=data.weight)
 
     user = use_case.execute(payload=payload)
-    return user.serialize()
+    return user
 
 
 def find(user_id: int):

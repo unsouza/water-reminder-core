@@ -9,4 +9,4 @@ class CreateUser:
             "weight": payload.weight
         })
 
-        return user
+        return user.serialize()
